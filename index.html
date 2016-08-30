@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- CRUD LOCALSTORAGE  16/junio/2016
+author: Luis Zárate
+github: https://github.com/luiszafe
+email:  luiszaafe@gmail.com
+ -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--requerido  por Bootstrap para un óptimo renderizado 	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crud Local Storage HTML5</title>
+	
+	<!-- incluimos cdn Boostrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<style>
+	/* centramos los encabezados y filas de la tabla contactos*/
+		td,th{
+			text-align: center;
+			vertical-align: middle;
+		}
+	</style>
+
+
+</head>
+<body>
+	<!--INICIA BLOQUE DE INTERFAZ 	-->
+	<div class="container">
+		<div class="row">
+			<div class="panel panel-info">
+		  <div class="panel-heading text-center">
+		  	<h3><b>Agenda de Contactos</b></h3>
+		  </div>
+		  <div class="panel-body">
+		   	<div class="col-xs-12 col-md-6 col-lg-3">
+			Nombre<input type="text" class="form-control input-sm alfabeticos" id="txtnombre"/>
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-3">
+			Edad<input type="text" class="form-control input-sm enteros" id="txtedad"/>
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-3">
+			Telefono<input type="text" class="form-control input-sm enteros" id="txttel"/>
+		</div>
+		<!--btnAdd para agregar contactos, btnSave para guardar los cambios de un contacto seleccionado -->
+		<div class="col-xs-12 col-md-6 col-lg-3"><br>
+			<button type="button" id="btnAdd" class="btn btn-primary btn-sm" aria-label="Left Align">
+			  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Agregar
+			</button>
+			<button type="button" id="btnSave" class="btn btn-success btn-sm" aria-label="Left Align">
+			  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Guardar cambios
+			</button>
+
+		</div>
+		<br><br>
+<hr>
+<span class="label label-default text-center">Lista de agregados</span>
+<!--creamos la tabla  donde mostraremos los contactos -->
+<table ID='tblContactos' class='table table-striped table-responsive table-hover'>
+     <tr>     
+     <th>Nombre</th>
+     <th>Edad</th>    
+     <th>Telefono</th>     
+     <th colspan="2" align="center">Acciones</th>
+     </tr>
+     </table>
+
+
+		  </div>
+		  <div class="panel-footer">
+		  	<div class="row">
+		  	<div  class='col-xs-5 col-md-6 col-lg-5 text-left'>June 2016 <a href="https://github.com/luiszafe">luiszafe</a> </div><div  class='col-xs-7 col-md-6 col-lg-7 text-right'>Crud (localStorage HTML5, jQuery, Bootstrap, JSON)</div>
+		  	</div>
+		  </div>
+
+
+		</div> <!-- /fin div row  -->
+	
+
+	</div>	<!-- /fin div container  -->
+	<!--FINALIZA BLOQUE DE INTERFAZ 	-->
+
+
+
+
+
+
+<!--INCLUIMOS JQUERY Y BOOTSTRAP DESDE LOS CDN 	-->
+
+<!--jQuery 	-->
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+	<!-- JavaScript de Boostrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<!--INCLUIMOS NUESTROS SCRIPS PERSONALIZADOS 	-->
+<!--script para validar el tipo de dato ingresado 	-->
+<script src="validator.js" ></script>
+<!--script donde se efectuan las operaciones	-->
+<script src="scripts.js" ></script>
+
+</body>
+</html>
